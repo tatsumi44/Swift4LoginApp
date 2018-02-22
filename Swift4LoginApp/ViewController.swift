@@ -59,8 +59,9 @@ class ViewController: UIViewController {
     }
     
     func login(){
-        performSegue(withIdentifier: "Result", sender: nil)
+        performSegue(withIdentifier: "Last", sender: nil)
     }
+    
 
 
 }

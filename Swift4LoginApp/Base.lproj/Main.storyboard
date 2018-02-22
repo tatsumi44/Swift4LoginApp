@@ -75,6 +75,7 @@
                         <outlet property="passwordTextFeild" destination="k2W-Ei-T46" id="Vh2-QA-XCx"/>
                         <segue destination="cUs-rf-pyF" kind="presentation" identifier="Result" id="KeO-yj-nYX"/>
                         <segue destination="YUe-nm-IaF" kind="presentation" identifier="Register" id="HnT-KV-KyO"/>
+                        <segue destination="Iks-pP-4O9" kind="presentation" identifier="Last" id="qfn-Ng-Kea"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,16 +90,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfA-57-1jb">
-                                <rect key="frame" x="130" y="355" width="127" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="ログアウト"/>
-                                <connections>
-                                    <action selector="backButton:" destination="cUs-rf-pyF" eventType="touchUpInside" id="OmU-qf-Nin"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-QL-AKy">
                                 <rect key="frame" x="20" y="109" width="335" height="30"/>
                                 <nil key="textColor"/>
@@ -173,11 +164,81 @@
                         <outlet property="courseTextField" destination="LA4-ov-yYR" id="ACJ-YL-Lk0"/>
                         <outlet property="gradeTextField" destination="pxI-aP-0Px" id="4F1-fQ-GbL"/>
                         <outlet property="nameTextField" destination="IXT-QL-AKy" id="sxO-gQ-URM"/>
+                        <segue destination="Iks-pP-4O9" kind="presentation" identifier="GoLast" id="YcD-go-Qpp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoO-Xp-ZkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1456.8" y="312.59370314842579"/>
+        </scene>
+        <!--Last Result View Controller-->
+        <scene sceneID="ofS-Xq-LZP">
+            <objects>
+                <viewController id="Iks-pP-4O9" customClass="LastResultViewController" customModule="Swift4LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EvM-e2-fMw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcW-Fy-c44">
+                                <rect key="frame" x="66" y="113" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学年" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hof-Uf-oOk">
+                                <rect key="frame" x="66" y="152" width="264" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学部" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH1-su-uGm">
+                                <rect key="frame" x="66" y="197" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-ov-lj6">
+                                <rect key="frame" x="66" y="237" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-KG-j2g">
+                                <rect key="frame" x="66" y="273" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwW-dH-xpC">
+                                <rect key="frame" x="119" y="434" width="150" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="Iks-pP-4O9" eventType="touchUpInside" id="0fQ-3O-kqc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hhR-9b-Odt"/>
+                    </view>
+                    <connections>
+                        <outlet property="courseLabel" destination="rH1-su-uGm" id="6Kl-3k-5Ai"/>
+                        <outlet property="emailLabel" destination="mfa-ov-lj6" id="Zwl-BN-rGF"/>
+                        <outlet property="gradeLabel" destination="hof-Uf-oOk" id="EyT-w5-MN6"/>
+                        <outlet property="idLabel" destination="Z3D-KG-j2g" id="C3Q-Zi-SDI"/>
+                        <outlet property="nameLabel" destination="qcW-Fy-c44" id="8TF-6Q-sjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQG-xq-u0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2336.8000000000002" y="312.59370314842579"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="rJd-C0-EdL">
@@ -241,6 +302,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XNx-cH-tig"/>
+        <segue reference="YcD-go-Qpp"/>
+        <segue reference="KeO-yj-nYX"/>
     </inferredMetricsTieBreakers>
 </document>

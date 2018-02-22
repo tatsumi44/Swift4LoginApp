@@ -60,22 +60,4 @@ class ResultViewController: UIViewController {
                 }
         }
     }
-    
-    
-    @IBAction func backButton(_ sender: Any) {
-        do{
-            try Auth.auth().signOut()
-            
-            dismiss(animated: true, completion: nil)
-            
-        }catch let error as NSError {
-            print("\(error.localizedDescription)")
-        }
-        
-    }
-    
-    
-    
-    
-    
 }

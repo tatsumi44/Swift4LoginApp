@@ -16,6 +16,7 @@
 		B9F45FA9203C114A002AED14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F45FA7203C114A002AED14 /* LaunchScreen.storyboard */; };
 		B9F45FB1203C12AA002AED14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9F45FB0203C12AA002AED14 /* GoogleService-Info.plist */; };
 		B9F45FB3203C188C002AED14 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F45FB2203C188C002AED14 /* ResultViewController.swift */; };
+		B9FBE73E203E84D000BC8A45 /* LastResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FBE73D203E84D000BC8A45 /* LastResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B9F45FAA203C114A002AED14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9F45FB0203C12AA002AED14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9F45FB2203C188C002AED14 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B9FBE73D203E84D000BC8A45 /* LastResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B9F45FA0203C114A002AED14 /* ViewController.swift */,
 				B9F45FB2203C188C002AED14 /* ResultViewController.swift */,
 				B963A6F7203D35E500854F90 /* RegisterViewController.swift */,
+				B9FBE73D203E84D000BC8A45 /* LastResultViewController.swift */,
 				B9F45FA2203C114A002AED14 /* Main.storyboard */,
 				B9F45FA5203C114A002AED14 /* Assets.xcassets */,
 				B9F45FA7203C114A002AED14 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			files = (
 				B9F45FA1203C114A002AED14 /* ViewController.swift in Sources */,
 				B9F45F9F203C114A002AED14 /* AppDelegate.swift in Sources */,
+				B9FBE73E203E84D000BC8A45 /* LastResultViewController.swift in Sources */,
 				B9F45FB3203C188C002AED14 /* ResultViewController.swift in Sources */,
 				B963A6F8203D35E500854F90 /* RegisterViewController.swift in Sources */,
 			);
