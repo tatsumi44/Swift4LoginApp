@@ -19,9 +19,7 @@ class ResultViewController: UIViewController {
     var grade: String!
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var gradeTextField: UITextField!
-    
     @IBOutlet weak var courseTextField: UITextField!
     
     override func viewDidLoad() {
@@ -59,5 +57,6 @@ class ResultViewController: UIViewController {
                     print("Document successfully written!")
                 }
         }
+        performSegue(withIdentifier: "GoLast", sender: nil)
     }
 }

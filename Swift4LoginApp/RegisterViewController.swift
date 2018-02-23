@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController {
     var handle: AuthStateDidChangeListenerHandle!
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -34,6 +36,10 @@ class RegisterViewController: UIViewController {
                 self.performSegue(withIdentifier: "Register_login", sender: nil)
             }
         }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     

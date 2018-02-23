@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
     
     var handle: AuthStateDidChangeListenerHandle!
 
@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextFeild.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
             if Auth.auth().currentUser != nil {
                 self.login()
             } else {
+//                self.register()
                 print("ログインしてね")
             }
         })
@@ -60,6 +63,13 @@ class ViewController: UIViewController {
     
     func login(){
         performSegue(withIdentifier: "Last", sender: nil)
+    }
+    func register(){
+        performSegue(withIdentifier: "Register", sender: nil)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 
